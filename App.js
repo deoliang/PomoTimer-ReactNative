@@ -101,38 +101,38 @@ export default class App extends React.Component {
   //function that resets the timer
   reset = () => {
     if (this.state.workIsTrueBreakIsFalse) {
-      this.setState(prevState => ({
+      this.setState({
         isPause: true,
         minutes: WORK_MINUTES,
         seconds: WORK_SECONDS,
-      }))
+      })
     } else {
-      this.setState(prevState => ({
+      this.setState({
         isPause: true,
         minutes: BREAK_MINUTES,
         seconds: BREAK_SECONDS,
-      }))
+      })
     }
   }
 
   //function that toggles the interface to work time
   toggleWork = () => {
-    this.setState(prevState => ({
+    this.setState({
       isPause: true,
       minutes: WORK_MINUTES,
       seconds: WORK_SECONDS,
       workIsTrueBreakIsFalse: true,
-    }))
+    })
   }
 
   //function that toggles the interface to break time
   toggleBreak = () => {
-    this.setState(nextState => ({
+    this.setState({
       isPause: true,
       minutes: BREAK_MINUTES,
       seconds: BREAK_SECONDS,
       workIsTrueBreakIsFalse: false,
-    }))
+    })
   }
 
   //function that dismisses the vibration once timer reaches 0:00
@@ -140,17 +140,17 @@ export default class App extends React.Component {
     Vibration.cancel()
     this.interval = setInterval(this.dec, 1000)
     if (this.state.workIsTrueBreakIsFalse) {
-      this.setState(prevState => ({
+      this.setState({
         isPause: true,
         minutes: WORK_MINUTES,
         seconds: WORK_SECONDS,
-      }))
+      })
     } else {
-      this.setState(prevState => ({
+      this.setState({
         isPause: true,
         minutes: BREAK_MINUTES,
         seconds: BREAK_SECONDS,
-      }))
+      })
     }
   }
 
