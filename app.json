@@ -1,7 +1,6 @@
 {
   "expo": {
     "name": "PomoTimer",
-    "description": "Timer that lets you easily manage between work time and break time",
     "slug": "pomotimer",
     "privacy": "public",
     "sdkVersion": "32.0.0",
@@ -17,6 +16,12 @@
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
       "supportsTablet": true
     }
